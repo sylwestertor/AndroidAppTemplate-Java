@@ -1,11 +1,11 @@
 package thor.app.ui.screens.base;
 
 import thor.app.dependencies.DependencyPack;
-import thor.app.prefs.IPrefs;
+import thor.app.prefs.Prefs;
 
-public abstract class BasePresenter<T extends BaseInterface> {
+public abstract class BasePresenter<T extends BaseActivityInterface> {
     protected T view;
-    protected IPrefs prefs;
+    protected Prefs prefs;
 
     public BasePresenter(T view, DependencyPack pack) {
         this.view = view;

@@ -9,11 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import butterknife.ButterKnife;
+import thor.app.api.retrofit.ApiError;
 import thor.app.dependencies.DependencyPack;
 
-public abstract class BaseActivity<T extends BasePresenter>
+public abstract class BaseActivityActivity<T extends BasePresenter>
         extends AppCompatActivity
-        implements BaseInterface {
+        implements BaseActivityInterface {
 
     protected Activity activity;
     protected T presenter;
@@ -24,7 +25,7 @@ public abstract class BaseActivity<T extends BasePresenter>
         activity = this;
 
         Integer layout = createLayout();
-        if(layout != null) {
+        if (layout != null) {
             setContentView(layout);
             ButterKnife.bind(this);
         }
@@ -47,5 +48,10 @@ public abstract class BaseActivity<T extends BasePresenter>
     @Override
     public void showError(String message) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showError(ApiError apiError) {
+        showError(apiError.getType() + " ERROR: " + apiError.getMessage());
     }
 }

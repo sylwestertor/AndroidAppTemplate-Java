@@ -10,15 +10,15 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import thor.app.App;
-import thor.app.prefs.IPrefs;
 import thor.app.prefs.Prefs;
+import thor.app.prefs.PrefsImpl;
 
 @Module
 public class PrefsModule {
     @Provides
     @Singleton
-    IPrefs providePrefs(SharedPreferences sharedPreferences, Gson gson) {
-        return new Prefs(sharedPreferences, gson);
+    Prefs providePrefs(SharedPreferences sharedPreferences, Gson gson) {
+        return new PrefsImpl(sharedPreferences, gson);
     }
 
     @Provides
