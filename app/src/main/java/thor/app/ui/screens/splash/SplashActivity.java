@@ -6,10 +6,10 @@ import android.support.annotation.Nullable;
 
 import thor.app.R;
 import thor.app.dependencies.DependencyPack;
-import thor.app.ui.screens.base.BaseActivityActivity;
+import thor.app.ui.screens.base.BaseActivity;
 
-public class SplashActivityActivity
-        extends BaseActivityActivity<SplashPresenter>
+public class SplashActivity
+        extends BaseActivity<SplashPresenter>
         implements SplashActivityInterface {
 
     @Override

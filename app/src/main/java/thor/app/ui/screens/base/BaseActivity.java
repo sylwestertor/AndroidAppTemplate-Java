@@ -12,7 +12,7 @@ import butterknife.ButterKnife;
 import thor.app.api.retrofit.ApiError;
 import thor.app.dependencies.DependencyPack;
 
-public abstract class BaseActivityActivity<T extends BasePresenter>
+public abstract class BaseActivity<T extends BasePresenter>
         extends AppCompatActivity
         implements BaseActivityInterface {
 
