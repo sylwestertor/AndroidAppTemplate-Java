@@ -1,2 +1,2 @@
 # AppTemplate
-Basic Android App template - implemented MVP architecture, Dagger and Butterknife
+Basic Android App template - MVP architecture, Dagger injection, Retrofit api
